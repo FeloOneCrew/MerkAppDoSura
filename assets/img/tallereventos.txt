@@ -1,0 +1,96 @@
+1
+
+let buton = document.querySelector(".icon")
+buton.addEventListener("click", ()=>{
+    //alert("diste click al boton")
+   let menu= document.querySelector("#myNavbar")
+   //console.log(menu)
+   menu.classList.toggle("responsive")
+})
+
+
+2 
+
+let  buton = document.querySelector(".dropbtn")
+buton.addEventListener("click" ,()=>{
+   let menu = document.querySelector("#myDropdown")
+   menu.classList.toggle("show")
+})
+
+
+
+3
+
+document.addEventListener("DOMContentLoaded", function() {
+    const openBtn = document.querySelector(".openbtn");
+    const closeBtn = document.querySelector(".closebtn");
+    const sidebar = document.querySelector(".sidebar");
+  
+    openBtn.addEventListener("click", function() {
+      sidebar.style.left = "0";
+    });
+  
+    closeBtn.addEventListener("click", function() {
+      sidebar.style.left = "-200px";
+    });
+  });
+
+
+5
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    
+    if (checkBox.checked) {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+  }
+
+6
+function mostrarResultado() {
+    var select = document.querySelector('.nieve');
+    var selectedOption = select.options[select.selectedIndex].text;
+    var resultadoDiv = document.querySelector('.resultado');
+    resultadoDiv.innerHTML = '';
+    if (selectedOption !== 'Seleccione Uno …') {
+        resultadoDiv.textContent = 'Has seleccionado: ' + selectedOption;
+    }
+}
+
+
+
+
+
+9 y 10
+
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('.fixed-header');
+    header.classList.toggle('scrolled', window.scrollY > 0);
+  });
+
+  // JavaScript code
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('.fixed-header');
+    var button = document.getElementById('myBtn');
+    
+    header.classList.toggle('scrolled', window.scrollY > 0);
+    button.style.display = window.scrollY > 0 ? 'block' : 'none';
+  });
+  
+  document.getElementById('myBtn').addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+
+11
+
+  function showPageContent() {
+    document.getElementById('loadingIcon').style.display = 'none';
+    document.getElementById('pageContent').style.display = 'block'; // Mostrar el contenido completo de la página
+  }
+  setTimeout(showPageContent, 3000); 
